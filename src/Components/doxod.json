@@ -1,0 +1,19 @@
+{
+    "incomes": [
+        {
+            "id": "1",
+            "name": "Депозит",
+            "imgUrl": "https://avatars.mds.yandex.net/i?id=199c10600868c873427662231005b6a442b21fa7-11512952-images-thumbs&n=13" 
+        },
+        {
+          "id": "2",
+          "name": "Зарплата",
+          "imgUrl": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614549850_42-p-dengi-na-belom-fone-65.jpg" 
+      },
+      {
+        "id": "3",
+        "name": "Сбережения",
+        "imgUrl": "https://espacemc.com/wp-content/uploads/2020/09/Defi-CELI.jpg" 
+      }
+    ]
+}

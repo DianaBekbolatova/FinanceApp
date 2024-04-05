@@ -1,0 +1,51 @@
+{
+    "expenses": [
+       {
+        "id": "1",
+        "price": "3000",
+        "categoryId": "1",
+        "comment": "Бензин"
+       },
+       {
+        "id": "2",
+        "price": "50000",
+        "categoryId": "1",
+        "comment": "Подвеска"
+       },
+       {
+        "id": "3",
+        "price": "21000",
+        "categoryId": "3",
+        "comment": "Кафешка"
+       },
+       {
+        "id": "4",
+        "price": "350000",
+        "categoryId": "2",
+        "comment": "Билеты"
+       },
+       {
+        "id": "5",
+        "price": "400000",
+        "categoryId": "2",
+        "comment": "Путевка"
+       }
+      ],
+      "category": [
+        {
+         "id": "1",
+         "name": "Автомобиль",
+         "imgUrl": "https://img.freepik.com/premium-vector/car-icon-isolated-on-a-white-background_646737-2503.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Путешествия",
+            "imgUrl": "https://cdn-icons-png.flaticon.com/512/5087/5087450.png"
+        },
+        {
+            "id": "3",
+            "name": "Еда",
+            "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_s6W0QB6Dk7DKl_0jmGoqbtB5tK4LA6V3HA&usqp=CAU"
+        }
+       ]
+}
