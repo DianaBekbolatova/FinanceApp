@@ -1,63 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import incomeDoxod from './doxod.json'
 
 export default function Incomes({ onSaveIncomes, onAddNewCategoryIncomes, categoriesIncomes, setCategoriesIncomes }) {
-  const [incomes, setIncomes] = useState([]);
+  const [incomes, setIncomes] = useState([])
   const [modal, setModal] = useState(false)
-  const [modalForNew, setModalNew] = useState(false);
-  const [image, setImage] = useState(null);
-  const [summa, setSumma] = useState('');
-  const [date, setDate] = useState('');
-  const [comment, setComment] = useState('');
-  const [newCategory, setNewCategory] = useState('');
-  const [dataLoaded, setDataLoaded] = useState(false); // Добавлено состояние для отслеживания загрузки данных
+  const [modalForNew, setModalNew] = useState(false)
+  const [image, setImage] = useState(null)
+  const [summa, setSumma] = useState('')
+  const [date, setDate] = useState('')
+  const [comment, setComment] = useState('')
+  const [newCategory, setNewCategory] = useState('')
+  const [dataLoaded, setDataLoaded] = useState(false)
 
   useEffect(() => {
     if (!dataLoaded) {
-      setIncomes(incomeDoxod.incomes);
-      setDataLoaded(true); // Устанавливаем флаг, что данные загружены
+      setIncomes(incomeDoxod.incomes)
+      setDataLoaded(true)
     }
-  }, [dataLoaded]);
+  }, [dataLoaded])
 
   const funcModal = () => {
-    setModal(true);
-  };
+    setModal(true)
+  }
 
   const funcModNew = () => {
-    setModalNew(true);
-  };
+    setModalNew(true)
+  }
 
   const saveInMain = () => {
-    const incomesData = { summa, date, comment };
-    onSaveIncomes(incomesData);
+    const incomesData = { summa, date, comment }
+    onSaveIncomes(incomesData)
 
-    setSumma('');
-    setDate('');
-    setComment('');
-    setModal(false);
-  };
+    setSumma('')
+    setDate('')
+    setComment('')
+    setModal(false)
+  }
 
   const addNewCategory = () => {
-    const newCategoryObj = { id: Math.random(), name: newCategory, imgUrl: image };
-    onAddNewCategoryIncomes(newCategoryObj);
-    setCategoriesIncomes([...categoriesIncomes, newCategoryObj]);
+    const newCategoryObj = { id: Math.random(), name: newCategory, imgUrl: image }
+    onAddNewCategoryIncomes(newCategoryObj)
+    setCategoriesIncomes([...categoriesIncomes, newCategoryObj])
     setIncomes([...incomes, newCategoryObj])
-    setModalNew(false);
-    setNewCategory('');
-    setImage('');
-  };
+    setModalNew(false)
+    setNewCategory('')
+    setImage('')
+  }
 
   const forImage = (event) => {
-    const file = event.target.files[0];
-    const read = new FileReader();
+    const file = event.target.files[0]
+    const read = new FileReader()
 
     read.onload = () => {
-      setImage(read.result);
-    };
-    if (file) {
-      read.readAsDataURL(file);
+      setImage(read.result)
     }
-  };
+    if (file) {
+      read.readAsDataURL(file)
+    }
+  }
 
   return (
     <div>
@@ -117,5 +117,5 @@ export default function Incomes({ onSaveIncomes, onAddNewCategoryIncomes, catego
         </div>
       )}
     </div>
-  );
+  )
 }
